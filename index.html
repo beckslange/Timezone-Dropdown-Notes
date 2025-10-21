@@ -3,68 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Notes-Timezone</title>
+    <link rel="stylesheet" href="src/index.css" />
+    <title>HTML Select Elements</title>
   </head>
   <body>
-    <div>
-      <!--most forms go to a backend interface, and the way to send that is to go to a
-    specific URL, as shown-->
-      <form action="/submit">
-        <div>
-          <label>What pet do you have?</label>
-          <div>
-            <input type="checkbox" name="pets" id="cats" />
-            <label for="cats">Cats</label>
-          </div>
-          <div>
-            <input type="checkbox" name="pets" id="dogs" />
-            <label for="dogs">Dogs</label>
-          </div>
-          <div>
-            <input type="checkbox" name="pets" id="frogs" />
-            <label for="frogs">Frogs</label>
-          </div>
-        </div>
-        <div>
-          <input type="submit" value="Sign up" />
-        </div>
-      </form>
-    </div>
+    <label for="countries">Which country would you like to travel to?</label>
+    <select name="country" id="countries">
+      <!--name is for backend developers-->
+      <option value="">Select a Country</option>
+      <option value="france">France</option>
+      <option value="italy">Italy</option>
+      <option value="brazil">Brazil</option>
+      <option value="japan">Japan</option>
+    </select>
+
+    <script src="src/index.js"></script>
+    <!-- <select name="" id="">
+      <option value="">option 1</option>
+    </select>-->
+    <!--Select is basically a dropdown-->
   </body>
 </html>
-<!-- step 1 different types of inputs
-      <label for="first-name">Where are you from?</label>
-
-    step 2, we want this to be clickable, so give it an id, and then add name of
-    to label for, as shown. What this did was every time you click on the label, it 
-    directs you to the input text box
-      <input type="text" id="first-name" placeholder="city, state, country" />
-      input can have min and max length, required, autofocus, etc.
-      <div><input type="number" /></div>
-      <div><input type="search" /></div>
-      <div><input type="date" /></div>
-      <div><input type="time" /></div>
-      <div><input type="color" /></div>
-      <div><input type="url" /></div>
-    most of these are not really used-->
-
-<!--   <label for="first-name">What is your email?</label>
-        all the info from the name element goes to backend developers, so type is for html,
-        id is for the label, and name is for the backend--this is how all the info is organized.
-        if you do not include a name element, then the backend developer does not
-        get any info
-        <input type="email" name="email" id="email" />
-
-        <label for="color">What is your favorite color?</label>
-        <input type="color" name="color" id="color" /><input
-          type="submit"
-          value="Sign up"
-        />-->
-
-<!--  <input type="radio" name="pet" id="cat" checked />
-          //wherever checked is is going to be the default option
-          <label for="cat">Cat</label>
-          <input type="radio" name="pet" id="dog" /><label for="dog">Dog</label>
-          <input type="radio" name="pet" id="frog" /><label for="frog"
-            >frog</label
-          >-->
