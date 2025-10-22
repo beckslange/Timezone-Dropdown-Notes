@@ -2,7 +2,6 @@
 /* //step 2
 console.log(countriesSelect);
 console.log(countriesSelect.value);*/
-
 //step 4
 /*before steps 3 and 4, step 2 would only show select a country, becuase that was the first 
 country, but now we created an event listener that makes it so that any country 
@@ -33,3 +32,44 @@ let countriesSelect = document.querySelector("#countries");
 //step 3
 countriesSelect.addEventListener("change", showSelectedCountry); 
 and erase this one*/
+//JS Time Events Notes
+/*<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Timing Events</title>
+  </head>
+  <body>
+    <!--step 2, adding the div so there is a function to call-->
+    <div id="hello">Hello</div>
+    <!--step 5-->
+    <div id="date"></div>
+    <script>
+      //step 3--creating the function
+      function sayHello() {
+        let helloBox = document.querySelector("#hello");
+        helloBox.innerHTML = "Bonjour!";
+      }
+
+      //step 7--we want to keep up with the time in real time, without reloading the page
+      function displayDate() {
+        //step 6, create let and innerhtml; step 8, move these two lines into displayDate function
+        let date = document.querySelector("#date");
+        date.innerHTML = new Date();
+      }
+
+      //step 1
+      setTimeout(sayHello, 1000);
+
+      //step 4, not really necessary--steps 1 and 2 give the same result as step 4
+      setTimeout(() => {
+        let helloBox = document.querySelector("#hello");
+        helloBox.innerHTML = "Bonjour!";
+      }, 1000);
+
+      //step 9
+      setInterval(displayDate, 1000);
+    </script>
+  </body>
+</html>*/
